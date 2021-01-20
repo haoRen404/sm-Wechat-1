@@ -1,0 +1,40 @@
+<!--index.wxml-->
+<home wx:if="{{PageCur=='home'}}"></home>
+<community wx:if="{{PageCur=='community'}}"></community>
+<play wx:if="{{PageCur=='play'}}"></play>
+<organization wx:if="{{PageCur=='organization'}}"></organization>
+<me wx:if="{{PageCur=='me'}}"></me>
+
+<view class="cu-bar tabbar bg-white shadow foot">
+  <view class="action" bindtap="NavChange" data-cur="home">
+    <view class='cuIcon-cu-image'>
+      <image src="/images/tabbar/home{{PageCur=='home'?'_cur':''}}.png"></image>
+      <!-- <text class="cuIcon-home lg text-gray"></text> -->
+    </view>
+    <view class="{{PageCur=='home'?'text-green':'text-gray'}}">首页</view>
+  </view>
+  <view class="action" bindtap="NavChange" data-cur="community">
+    <view class='cuIcon-cu-image'>
+      <image src="/images/tabbar/community{{PageCur=='community'?'_cur':''}}.png"></image>
+    </view>
+    <view class="{{PageCur=='community'?'text-green':'text-gray'}}">社区</view>
+  </view>
+  <view class="action" bindtap="NavChange" data-cur="play">
+    <view class='cuIcon-cu-image'>
+      <image src="/images/tabbar/play{{PageCur=='play'?'_cur':''}}.png"></image>
+    </view>
+    <view class="{{PageCur=='play'?'text-green':'text-gray'}}">活动</view>
+  </view>
+  <view class="action" bindtap="NavChange" data-cur="organization">
+    <view class='cuIcon-cu-image'>
+      <image src="/images/tabbar/organization{{PageCur=='organization'?'_cur':''}}.png"></image>
+    </view>
+    <view class="{{PageCur=='organization'?'text-green':'text-gray'}}">社团</view>
+  </view>
+  <view class="action" bindtap="NavChange" data-cur="me">
+    <view class='cuIcon-cu-image'>
+      <image src="/images/tabbar/me{{PageCur=='me'?'_cur':''}}.png"></image>
+    </view>
+    <view class="{{PageCur=='me'?'text-green':'text-gray'}}">我的</view>
+  </view>
+</view>

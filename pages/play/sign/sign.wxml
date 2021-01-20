@@ -1,0 +1,14 @@
+<!--pages/play/sign/sign.wxml-->
+
+<!-- 头部导航 -->
+<cu-custom bgColor="bg-gradual-pink" isBack="{{true}}">
+  <view slot="backText">返回</view>
+  <view slot="content">签到列表</view>
+</cu-custom>
+
+<!-- 列表标题 -->
+<view class="cu-bar bg-white solid-bottom margin-top">
+  <view class="action">
+    <text class="cuIcon-title text-orange "></text> 签到列表
+  </view>
+</view>

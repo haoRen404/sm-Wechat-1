@@ -1,0 +1,70 @@
+<!--pages/me/home/home.wxml-->
+
+<!-- 头部导航 -->
+<!-- <cu-custom bgImage="https://image.weilanwl.com/color2.0/plugin/cjkz2329.jpg">
+<view slot="content">我的</view>
+</cu-custom> -->
+
+<scroll-view scroll-y class="scrollPage">
+  <view class="UCenter-bg">
+    <image src="/images/logo.png" class="png" mode="widthFix"></image>
+    <view class="text-xl text-bold padding-top">是好人呀</view>
+    <view class="margin-top-sm">
+      <text>复杂的世界,做一个好人就好!</text>
+    </view>
+    <!-- 倒影图 -->
+    <!-- <image src="/images/logo.png" mode="scaleToFill" class="gif-wave"></image> -->
+  </view>
+</scroll-view>
+
+<!-- 按钮列表 -->
+<view class="cu-list menu card-menu margin-top-xl margin-bottom-xl shadow-lg">
+  <view class="cu-item arrow">
+    <navigator class="content" url="/pages/me/message/message" hover-class="none">
+      <text class="cuIcon-commentfill text-green"></text>
+      <text class="text-grey">消息</text>
+    </navigator>
+  </view>
+  <view class="cu-item arrow">
+    <navigator class="content" url="/pages/me/collection/collection" hover-class="none">
+      <text class="cuIcon-favorfill text-green"></text>
+      <text class="text-grey">收藏</text>
+    </navigator>
+  </view>
+  <view class="cu-item arrow">
+    <navigator class="content" url="/pages/me/post/post" hover-class="none">
+      <text class="cuIcon-writefill text-green"></text>
+      <text class="text-grey">我的帖子</text>
+    </navigator>
+  </view>
+  <view class="cu-item arrow">
+    <navigator class="content" url="/pages/me/play/play" hover-class="none">
+      <text class="cuIcon-activityfill text-green"></text>
+      <text class="text-grey">我的活动</text>
+    </navigator>
+  </view>
+  <view class="cu-item arrow">
+    <navigator class="content" url="/pages/me/personal/personal" hover-class="none">
+      <text class="cuIcon-card text-green"></text>
+      <text class="text-grey">编辑资料</text>
+    </navigator>
+  </view>
+  <view class="cu-item arrow">
+    <navigator class="content" url="/pages/me/message/message" hover-class="none">
+      <text class="cuIcon-attentionfavorfill text-green"></text>
+      <text class="text-grey">个人日志</text>
+    </navigator>
+  </view>
+</view>
+
+
+
+
+
+
+<!-- 为了不让底部导航栏挡住内容 -->
+<view class="padding-top-xl">
+  <view class="padding-top-xl">
+    <!-- <view class="padding-top-sm"></view> -->
+  </view>
+</view>

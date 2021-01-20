@@ -1,0 +1,99 @@
+<!--pages/organization/home/home.wxml-->
+
+<!-- 头部导航 -->
+<!-- <cu-custom bgImage="https://image.weilanwl.com/color2.0/plugin/cjkz2329.jpg">
+  <view slot="content">社团</view>
+</cu-custom> -->
+
+<scroll-view scroll-y class="scrollPage">
+  <view class="UCenter-bg">
+    <image src="/images/logo.png" class="png" mode="widthFix"></image>
+    <view class="text-xl text-bold padding-top">桂工数模</view>
+    <view class="margin-top-sm">
+      <text>By:桂林理工大学数学建模协会</text>
+    </view>
+    <!-- 倒影图 -->
+    <!-- <image src="/images/logo.png" mode="scaleToFill" class="gif-wave"></image> -->
+  </view>
+</scroll-view>
+
+<!-- 数据展示 -->
+<view class="padding flex text-center text-grey bg-white shadow-warp">
+  <view class="flex flex-sub flex-direction solid-right">
+    <view class="text-xxl text-orange">404</view>
+    <view class="margin-top-sm">
+      <text class="cuIcon-writefill"></text>学术</view>
+  </view>
+  <view class="flex flex-sub flex-direction solid-right">
+    <view class="text-xxl text-blue">1024</view>
+    <view class="margin-top-sm">
+      <text class="cuIcon-recordfill"></text>视频</view>
+  </view>
+  <view class="flex flex-sub flex-direction">
+    <view class="text-xxl text-green">2048</view>
+    <view class="margin-top-sm">
+      <text class="cuIcon-activityfill"></text>活动</view>
+  </view>
+</view>
+
+<!-- 分类导航 -->
+<scroll-view scroll-x class="bg-white nav">
+  <view class="flex text-center">
+    <view class="cu-item flex-sub {{index==TabCur?'text-orange cur':''}}" bindtap="tabSelect" wx:for="{{tabNav}}" wx:key
+      data-id="{{index}}">
+      {{item.name}}
+    </view>
+  </view>
+</scroll-view>
+<scroll-view scroll-x class="bg-white nav">
+  <view class="flex text-center">
+    <view class="cu-item flex-sub {{index==TabCur2?'text-orange cur':''}}" bindtap="tabSelect2" wx:for="{{tabNav}}"
+      wx:key data-id="{{index}}">
+      {{item.name}}
+    </view>
+  </view>
+</scroll-view>
+
+<!-- 关于我们 -->
+<view class='margin-sm bg-white padding-xl radius shadow-lg' wx:if="{{TabCur==0}}">
+  <!-- 标题 -->
+  <view class='text-center margin-bottom text-lg'>{{aboutTitle}}</view>
+  <!-- 内容 -->
+  <view class='text-content'>
+    <view class='margin-top-sm' wx:for="{{aboutContent}}">{{item.content}}</view>
+  </view>
+  <!-- <form>
+    <view class="cu-form-group" wx:for="{{aboutTable}}">
+      <view class="title">{{item.data.key}}</view>
+      <input placeholder="{{item.data.value}}" disabled></input>
+    </view>
+  </form> -->
+</view>
+
+<!-- 成员名录 -->
+<!--pages/category/category.wxml-->
+{{historyList[0].people[0].name}}
+<view class='margin-sm bg-white padding-xl radius shadow-lg' wx:if="{{TabCur==1}}">
+  <view class="flex flex-wrap">
+    <view class="basis-xs bg-grey padding-xs radius">
+      <view class="text-df text-center padding-tb-xs" wx:for="historyList">{{item.people}}</view>
+      <!-- <view class="text-df bg-white text-center padding-tb-xs">秘书部</view>
+      <view class="text-df text-center padding-tb-xs">秘书部</view>
+      <view class="text-df text-center padding-tb-xs">秘书部</view>
+      <view class="text-df text-center padding-tb-xs">秘书部</view>
+      <view class="text-df text-center padding-tb-xs">秘书部</view>
+      <view class="text-df text-center padding-tb-xs">秘书部</view> -->
+    </view>
+  </view>
+</view>
+
+
+
+
+
+<!-- 为了不让底部导航栏挡住内容 -->
+<view class="padding-top-xl">
+  <view class="padding-top-xl">
+    <view class="padding-top-sm"></view>
+  </view>
+</view>

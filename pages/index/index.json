@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "home": "/pages/home/home/home",
+    "community": "/pages/community/home/home",
+    "play": "/pages/play/home/home",
+    "organization": "/pages/organization/home/home",
+    "me": "/pages/me/home/home"
+  }
+}

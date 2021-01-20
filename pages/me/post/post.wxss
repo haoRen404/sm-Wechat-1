@@ -1,0 +1,4 @@
+/* pages/me/post/post.wxss */
+
+@import "/colorui/main.wxss";
+@import "/colorui/icon.wxss";

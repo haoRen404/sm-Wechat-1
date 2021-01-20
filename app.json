@@ -1,0 +1,31 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/home/home/home",
+    "pages/community/home/home",
+    
+    "pages/play/home/home",
+    "pages/play/register/register",
+    "pages/play/sign/sign",
+
+    "pages/organization/home/home",
+
+    "pages/me/home/home",
+    "pages/me/message/message",
+    "pages/me/collection/collection",
+    "pages/me/post/post",
+    "pages/me/play/play",
+    "pages/me/personal/personal"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "ColorUI",
+    "navigationStyle": "custom",
+    "navigationBarTextStyle": "white"
+  },
+  "usingComponents": {
+    "cu-custom": "/colorui/components/cu-custom"
+  },
+  "sitemapLocation": "sitemap.json"
+}

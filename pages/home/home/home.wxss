@@ -1,0 +1,8 @@
+/* pages/home/home/home.wxss */
+
+@import "/colorui/main.wxss";
+@import "/colorui/icon.wxss";
+
+.box {  
+  margin: 20rpx 0; 
+}

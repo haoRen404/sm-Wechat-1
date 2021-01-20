@@ -1,0 +1,63 @@
+<!--pages/me/message/message.wxml-->
+
+<!-- 头部导航 -->
+<cu-custom bgColor="bg-gradual-pink" isBack="{{true}}">
+  <view slot="backText">返回</view>
+  <view slot="content">消息列表</view>
+</cu-custom>
+
+<!-- 消息列表标题 -->
+<view class="cu-bar bg-white solid-bottom margin-tb">
+  <view class="action">
+    <text class="cuIcon-title text-orange "></text> 消息列表
+  </view>
+</view>
+
+<view wx:for="{{3}}">
+  <!-- 一个点赞消息 -->
+  <view class="cu-list menu-avatar margin-bottom margin-lr">
+    <view class="cu-item">
+      <view class="cu-avatar round lg"
+        style="background-image:url(https://ossweb-img.qq.com/images/lol/img/champion/Taric.png);">
+        <view class="cu-tag badge"></view>
+        <!--小红点-->
+      </view>
+      <view class="content">
+        <view class="text-grey">
+          <text class="text-cut">瓦洛兰之盾-塔里克</text>
+          <view class="cu-tag round bg-green sm">老师</view>
+        </view>
+        <view class="text-gray text-sm flex">
+          <text class="text-cut">点赞了你的内容</text>
+        </view>
+      </view>
+      <view class="action">
+        <view class="text-grey text-xs">2021/01/19 22:20</view>
+        <view class="cuIcon-appreciatefill text-red"></view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 一个评论消息 -->
+  <view class="cu-list menu-avatar margin-bottom margin-lr">
+    <view class="cu-item">
+      <view class="cu-avatar round lg"
+        style="background-image:url(https://ossweb-img.qq.com/images/lol/img/champion/Taric.png);">
+        <view class="cu-tag badge"></view>
+      </view>
+      <view class="content">
+        <view class="text-grey">
+          <text class="text-cut">瓦洛兰之盾-塔里克</text>
+          <view class="cu-tag round bg-blue sm">社团</view>
+        </view>
+        <view class="text-gray text-sm flex">
+          <text class="text-cut">评论了你的内容</text>
+        </view>
+      </view>
+      <view class="action">
+        <view class="text-grey text-xs">2021/01/19 22:20</view>
+        <view class="cuIcon-commentfill text-orange"></view>
+      </view>
+    </view>
+  </view>
+</view>

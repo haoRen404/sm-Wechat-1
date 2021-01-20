@@ -1,0 +1,74 @@
+<!--pages/home/home/home.wxml-->
+
+<!-- 头部导航 -->
+<cu-custom bgImage="https://image.weilanwl.com/color2.0/plugin/cjkz2329.jpg">
+  <!--需要返回则添加isBack="{{true}}"-->
+  <view slot="content">首页</view>
+</cu-custom>
+
+<!-- 搜索框 -->
+<view class="cu-bar search bg-white">
+  <view class="cu-avatar round" style="background-image:url(https://image.weilanwl.com/img/square-2.jpg);"></view>
+  <view class="search-form round">
+    <text class="cuIcon-search"></text>
+    <input type="text" placeholder="搜索" confirm-type="search"></input>
+  </view>
+  <!-- <view class="action">
+    <text class="cuIcon-close"></text>
+    <text>取消</text>
+  </view> -->
+</view>
+
+<!-- 分类导航 -->
+<scroll-view scroll-x class="bg-white nav">
+  <view class="flex text-center">
+    <view class="cu-item flex-sub {{index==TabCur?'text-orange cur':''}}" bindtap="tabSelect" wx:for="{{8}}" wx:key data-id="{{index}}">
+      学术{{index}}
+    </view>
+  </view>
+</scroll-view>
+
+<!-- 文章列表 -->
+<view class="cu-card case">
+  <view class="cu-item shadow" wx:for="{{5}}" wx:key>
+    <!-- 图片 -->
+    <view class="image">
+      <image src="https://ossweb-img.qq.com/images/lol/web201310/skin/big10006.jpg" mode="widthFix"></image>
+      <view class="cu-tag bg-blue">原创</view>
+    </view>
+    <!-- 标题和详情 -->
+    <view class="cu-list menu-avatar">
+      <!-- 标题 -->
+      <view class="text-df padding-lr padding-top text-bold">
+        专注视觉的小程序组件库
+      </view>
+      <!-- 详情 -->
+      <view class="text-sm padding-lr padding-top-xs">
+        衬衫的价格是9磅15便士，衬衫的价格是9磅15便士，衬衫的价格是9磅15便士，衬衫的价格是9磅15便士，
+      </view>
+    </view>
+    <!-- 文章数据 -->
+    <view class="cu-item text-ms">
+      <view class="flex-sub padding">  <!--content-->
+        <view class="text-gray">
+          <text class="cuIcon-friendfavor margin-lr-xs"></text> 作者：正义天使 凯尔
+        </view>
+        <view class="text-gray flex justify-between">
+          <view class="text-gray">
+            <text class="cuIcon-time margin-lr-xs"></text> 2021-01-18 02:23
+          </view>
+          <view class="text-gray">
+            <text class="cuIcon-attentionfavor margin-lr-xs"></text> 100
+            <text class="cuIcon-appreciate margin-lr-xs"></text> 200
+            <text class="cuIcon-comment margin-lr-xs"></text> 300
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+
+<!-- 为了不让底部导航栏挡住内容 -->
+<view class="padding-top-xl">
+  <view class="padding-top-xl"></view>
+</view>
