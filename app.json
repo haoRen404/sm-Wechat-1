@@ -6,7 +6,10 @@
     
     "pages/play/home/home",
     "pages/play/register/register",
+    "pages/play/registerInput/registerInput",
     "pages/play/sign/sign",
+    "pages/play/signInput/signInput",
+    "pages/play/publish/publish",
 
     "pages/organization/home/home",
 
@@ -15,7 +18,9 @@
     "pages/me/collection/collection",
     "pages/me/post/post",
     "pages/me/play/play",
-    "pages/me/personal/personal"
+    "pages/me/personal/personal",
+    "pages/me/article/article",
+    "pages/me/release/release"
   ],
   "window": {
     "backgroundTextStyle": "light",

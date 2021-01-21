@@ -1,0 +1,9 @@
+/* pages/play/registerInput/registerInput.wxss */
+
+@import "/colorui/main.wxss";
+@import "/colorui/icon.wxss";
+
+/* 控制表单第二列左侧缩进 */
+.cu-form-group .title {
+  min-width: calc(4em + 30rpx);
+}

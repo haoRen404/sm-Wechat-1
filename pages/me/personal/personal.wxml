@@ -26,12 +26,14 @@
     </view>
     <view class="cu-form-group">
       <view class="grid col-2 grid-square flex-sub">  <!--col-4:控制图片列数-->
+        <!-- 展示所选择的图片 -->
         <view class="bg-img" wx:for="{{imgList}}" wx:key="{{index}}" bindtap="ViewImage" data-url="{{imgList[index]}}">
           <image src='{{imgList[index]}}' mode='aspectFill'></image>
           <view class="cu-tag bg-red" catchtap="DelImg" data-index="{{index}}">
             <text class="cuIcon-close"></text>
           </view>
         </view>
+        <!-- 添加图片的框 -->
         <view class="solids" bindtap="ChooseImage" wx:if="{{imgList.length<1}}">  <!--{{imgList.length<1}}控制图片数量-->
           <text class="cuIcon-cameraadd"></text>
         </view>

@@ -12,3 +12,27 @@
     <text class="cuIcon-title text-orange "></text> 报名列表
   </view>
 </view>
+
+<view class="cu-card article">
+  <view class="cu-item" wx:for="{{5}}">
+    <!-- 标题 -->
+    <navigator url="/pages/play/registerInput/registerInput" class="title">
+      <text class="cuIcon-post text-orange"></text> 数度比赛报名
+    </navigator>
+    <!--时间、地点-->
+    <view class="padding-lr">
+      <!-- 介绍 -->
+      <view class="text-gray  padding-bottom">
+        <view class="text-cut">衬衫的价格是九磅十五便士。衬衫的价格是九磅十五便士。衬衫的价格是九磅十五便士。衬衫的价格是九磅十五便士。衬衫的价格是九磅十五便士。</view>
+      </view>
+      <!-- 时间 -->
+      <view class="text-gray">
+        <text class="cuIcon-time margin-lr-xs"></text> 2021-01-18 08:23 截止
+      </view>
+      <!-- 活动码 -->
+      <view class="text-blue padding-top-xs">
+        <text class="cuIcon-copy margin-lr-xs"></text> 443735
+      </view>
+    </view>
+  </view>
+</view>

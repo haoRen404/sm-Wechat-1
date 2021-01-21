@@ -1,0 +1,104 @@
+<!--pages/me/release/release.wxml-->
+
+<!-- 头部导航 -->
+<cu-custom bgColor="bg-gradual-pink" isBack="{{true}}">
+  <view slot="backText">返回</view>
+  <view slot="content">我的发布</view>
+</cu-custom>
+
+<!-- 导航 -->
+<scroll-view scroll-x class="bg-white nav">
+  <view class="flex text-center">
+    <view class="cu-item flex-sub {{index==TabCur?'text-purple cur':''}}" wx:for="{{tabTitle}}" wx:key
+      bindtap="tabSelect" data-id="{{index}}">
+      {{item.title}}
+    </view>
+  </view>
+</scroll-view>
+
+<!-- 我发布的活动列表 -->
+<view class="cu-card article" wx:if="{{TabCur==0}}">
+  <view class="cu-item" wx:for="{{5}}">
+    <!-- 活动标题 -->
+    <navigator url="/pages/play/registerInput/registerInput" class="title">
+      <text class="cuIcon-activityfill text-orange"></text> 数度比赛
+    </navigator>
+    <!--中间部分-->
+    <view class="content">
+      <!-- 活动首图 -->
+      <image src="https://ossweb-img.qq.com/images/lol/web201310/skin/big10006.jpg" mode="aspectFill"></image>
+      <view class="desc">
+        <!-- 活动介绍 -->
+        <view class="text-content"> 折磨生出苦难，苦难又会加剧折磨，凡间这无穷的循环，将有我来终结！真正的恩典因不完整而美丽，因情感而真诚，因脆弱而自由！</view>
+        <!-- 活动状态 -->
+        <view>
+          <view class="cu-tag bg-green light sm round">预告</view>
+          <view class="cu-tag bg-red light sm round">进行中</view>
+          <view class="cu-tag bg-gray light sm round">已结束</view>
+        </view>
+      </view>
+    </view>
+    <!--时间、地点-->
+    <view class="padding-lr padding-top">
+      <view class="text-gray">
+        <text class="cuIcon-time margin-lr-xs"></text> 2021-01-18 02:23 至 2021-01-18 08:23
+      </view>
+      <view class="text-gray">
+        <text class="cuIcon-friendfavor margin-lr-xs"></text> 雁山校区 05203
+      </view>
+      <view class="text-blue padding-top-xs">
+        <text class="cuIcon-copy margin-lr-xs"></text> 443735
+      </view>
+    </view>
+  </view>
+</view>
+
+<!-- 我发布的报名列表 -->
+<view class="cu-card article" wx:if="{{TabCur==1}}">
+  <view class="cu-item" wx:for="{{5}}">
+    <!-- 标题 -->
+    <navigator url="/pages/play/registerInput/registerInput" class="title">
+      <text class="cuIcon-post text-orange"></text> 数度比赛报名
+    </navigator>
+    <!--时间、地点-->
+    <view class="padding-lr">
+      <!-- 介绍 -->
+      <view class="text-gray  padding-bottom">
+        <view class="text-cut">衬衫的价格是九磅十五便士。衬衫的价格是九磅十五便士。衬衫的价格是九磅十五便士。衬衫的价格是九磅十五便士。衬衫的价格是九磅十五便士。</view>
+      </view>
+      <!-- 时间 -->
+      <view class="text-gray">
+        <text class="cuIcon-time margin-lr-xs"></text> 2021-01-18 08:23 截止
+      </view>
+      <!-- 活动码 -->
+      <view class="text-blue padding-top-xs">
+        <text class="cuIcon-copy margin-lr-xs"></text> 443735
+      </view>
+    </view>
+  </view>
+</view>
+
+<!-- 我发布的签到列表 -->
+<view class="cu-card article" wx:if="{{TabCur==2}}">
+  <view class="cu-item" wx:for="{{5}}">
+    <!-- 标题 -->
+    <navigator url="/pages/play/signInput/signInput" class="title">
+      <text class="cuIcon-focus text-orange"></text> 英语听力比赛签到
+    </navigator>
+    <!--时间、地点-->
+    <view class="padding-lr">
+      <!-- 介绍 -->
+      <view class="text-gray  padding-bottom">
+        <view class="text-cut">衬衫的价格是九磅十五便士。衬衫的价格是九磅十五便士。衬衫的价格是九磅十五便士。衬衫的价格是九磅十五便士。衬衫的价格是九磅十五便士。</view>
+      </view>
+      <!-- 时间 -->
+      <view class="text-gray">
+        <text class="cuIcon-time margin-lr-xs"></text> 2021-01-18 08:23 截止
+      </view>
+      <!-- 活动码 -->
+      <view class="text-blue padding-top-xs">
+        <text class="cuIcon-copy margin-lr-xs"></text> 443735
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,17 +1,77 @@
-// pages/me/personal/personal.js
+// pages/play/publish/publish.js
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    date: '1999-07-21',
-    region: ['广西省', '桂林市', '雁山区'],
+    tabTitle: [{title: "发布活动"}, {title: "发布报名"}, {title: "发布签到"}],
+    TabCur: 0,
+    scrollLeft:0,
+    date1: '2020-01-20',
+    time1: '12:00',
+    date2: '2020-01-25',
+    time2: '12:01',
     imgList: [],// 图片列表
-    index: null,// 普通选择所选择的结果
-    picker: ['男', '女'],// 普通选择的结果列表
+    date3: '2020-01-21',
+    time3: '12:02',
+    date4: '2020-01-22',
+    time4: '12:03',
+    getAdd: false,//是否获取地址
   },
 
+  // 顶部导航
+  tabSelect(e) {
+    this.setData({
+      TabCur: e.currentTarget.dataset.id,
+      scrollLeft: (e.currentTarget.dataset.id-1)*60
+    })
+  },
+  // 时间1的日期、时间选择
+  DateChange1(e) {
+    this.setData({
+      date1: e.detail.value
+    })
+  },
+  TimeChange1(e) {
+    this.setData({
+      time1: e.detail.value
+    })
+  },
+  // 时间2的日期时间选择
+  DateChange2(e) {
+    this.setData({
+      date2: e.detail.value
+    })
+  },
+  TimeChange2(e) {
+    this.setData({
+      time2: e.detail.value
+    })
+  },
+  // 时间3的日期时间选择
+  DateChange3(e) {
+    this.setData({
+      date3: e.detail.value
+    })
+  },
+  TimeChange3(e) {
+    this.setData({
+      time3: e.detail.value
+    })
+  },
+  // 时间4的日期时间选择
+  DateChange4(e) {
+    this.setData({
+      date4: e.detail.value
+    })
+  },
+  TimeChange3(e) {
+    this.setData({
+      time4: e.detail.value
+    })
+  },
   // 选择图片
   ChooseImage() {
     wx.chooseImage({
@@ -38,11 +98,11 @@ Page({
       current: e.currentTarget.dataset.url
     });
   },
-  // 删除图片，弹出提示框
+  // 删除图片
   DelImg(e) {
     wx.showModal({
       title: '删除确认',
-      content: '确定要删除这个好看的头像吗？',
+      content: '确定要删除这张好看的图片吗？',
       cancelText: '取消',
       confirmText: '确认',
       success: res => {
@@ -55,39 +115,12 @@ Page({
       }
     })
   },
-  // 日期更改（从表盘中选择好点确定后进行更改）
-  DateChange(e) {
+  // 更改是否获取位置
+  setAdd(e){
     this.setData({
-      date: e.detail.value
+      getAdd: !this.data.getAdd,
     })
   },
-  // 区域更改，地址更改（从表盘中选择好点确定后进行更改）
-  RegionChange: function(e) {
-    this.setData({
-      region: e.detail.value
-    })
-  },
-  // 普通选择更改选择的结果，即单列复选框
-  PickerChange(e) {
-    console.log(e);
-    this.setData({
-      index: e.detail.value
-    })
-  },
-  // 显示model
-  showModal(e) {
-    this.setData({
-      modalName: e.currentTarget.dataset.target
-    })
-  },
-  // 隐藏model
-  hideModal(e) {
-    this.setData({
-      modalName: null
-    })
-  },
-
-
 
   /**
    * 生命周期函数--监听页面加载

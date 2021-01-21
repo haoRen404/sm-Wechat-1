@@ -1,0 +1,191 @@
+<!--pages/play/publish/publish.wxml-->
+
+<!-- 头部导航 -->
+<cu-custom bgColor="bg-gradual-pink" isBack="{{true}}">
+  <view slot="backText">返回</view>
+  <view slot="content">发布</view>
+</cu-custom>
+
+<!-- 导航 -->
+<scroll-view scroll-x class="bg-white nav">
+  <view class="flex text-center">
+    <view class="cu-item flex-sub {{index==TabCur?'text-purple cur':''}}" wx:for="{{tabTitle}}" wx:key
+      bindtap="tabSelect" data-id="{{index}}">
+      {{item.title}}
+    </view>
+  </view>
+</scroll-view>
+
+<!-- 发布活动的表单 -->
+<form hidden="{{TabCur!=0}}">
+  <view class="cu-form-group">
+    <view class="title">活动名</view>
+    <input placeholder="请输入活动名"></input>
+  </view>
+  <view class="cu-form-group">
+    <textarea maxlength="-1" disabled="{{modalName!=null}}" bindinput="textareaAInput" placeholder="请输入活动描述"></textarea>
+  </view>
+
+  <!-- 首图 -->
+  <view class="cu-bar bg-white solids-top">
+    <view class="action">
+      首图上传
+    </view>
+    <view class="action">
+      {{imgList.length}}/1
+    </view>
+  </view>
+  <view class="cu-form-group">
+    <view class="grid col-2 grid-square flex-sub">
+      <!--col-4:控制图片列数-->
+      <!-- 展示所选择的图片 -->
+      <view class="bg-img" wx:for="{{imgList}}" wx:key="{{index}}" bindtap="ViewImage" data-url="{{imgList[index]}}">
+        <image src='{{imgList[index]}}' mode='aspectFill'></image>
+        <view class="cu-tag bg-red" catchtap="DelImg" data-index="{{index}}">
+          <text class="cuIcon-close"></text>
+        </view>
+      </view>
+      <!-- 添加图片的框 -->
+      <view class="solids" bindtap="ChooseImage" wx:if="{{imgList.length<1}}">
+        <!--{{imgList.length<1}}控制图片数量-->
+        <text class="cuIcon-cameraadd"></text>
+      </view>
+    </view>
+  </view>
+
+  <view class="cu-form-group">
+    <view class="title">日期选择</view>
+    <picker mode="date" value="{{date1}}" start="2000-01-01" end="2100-12-31" bindchange="DateChange1">
+      <view class="picker">
+        {{date1}}
+      </view>
+    </picker>
+  </view>
+  <view class="cu-form-group">
+    <view class="title">时间选择</view>
+    <picker mode="time" value="{{time1}}" start="00:00" end="23:59" bindchange="TimeChange1">
+      <view class="picker">
+        {{time1}}
+      </view>
+    </picker>
+  </view>
+  <view class="cu-form-group">
+    <view class="title">日期选择</view>
+    <picker mode="date" value="{{date2}}" start="2000-01-01" end="2100-12-31" bindchange="DateChange2">
+      <view class="picker">
+        {{date2}}
+      </view>
+    </picker>
+  </view>
+  <view class="cu-form-group">
+    <view class="title">时间选择</view>
+    <picker mode="time" value="{{time2}}" start="00:00" end="23:59" bindchange="TimeChange2">
+      <view class="picker">
+        {{time2}}
+      </view>
+    </picker>
+  </view>
+
+  <view class="cu-form-group">
+    <view class="title">活动地点</view>
+    <input placeholder="请输入活动地点"></input>
+  </view>
+  <view class="cu-form-group">
+    <view class="title">推文链接</view>
+    <input placeholder="请输入推文链接"></input>
+    <!-- <text class="cuIcon-locationfill text-orange"></text> -->
+  </view>
+</form>
+
+<!-- 发布报名的表单 -->
+<form hidden="{{TabCur!=1}}">
+  <!-- 标题 -->
+  <view class="cu-form-group">
+    <view class="title">活动名</view>
+    <input placeholder="请输入活动名"></input>
+  </view>
+  <!-- 描述 -->
+  <view class="cu-form-group">
+    <textarea maxlength="-1" disabled="{{modalName!=null}}" bindinput="textareaAInput" placeholder="请输入活动描述"></textarea>
+  </view>
+  <!-- 报名说明 -->
+  <view class="cu-form-group">
+    <textarea maxlength="-1" disabled="{{modalName!=null}}" bindinput="textareaAInput" placeholder="请输入报名说明"></textarea>
+  </view>
+  <!-- 日期时间选择 -->
+  <view class="cu-form-group">
+    <view class="title">日期选择</view>
+    <picker mode="date" value="{{date3}}" start="2000-01-01" end="2100-12-31" bindchange="DateChange3">
+      <view class="picker">
+        {{date3}}
+      </view>
+    </picker>
+  </view>
+  <view class="cu-form-group">
+    <view class="title">时间选择</view>
+    <picker mode="time" value="{{time3}}" start="00:00" end="23:59" bindchange="TimeChange3">
+      <view class="picker">
+        {{time3}}
+      </view>
+    </picker>
+  </view>
+</form>
+
+<!-- 发布签到的表单 -->
+<form hidden="{{TabCur!=2}}">
+  <!-- 标题 -->
+  <view class="cu-form-group">
+    <view class="title">签到标题</view>
+    <input placeholder="请输入签到标题"></input>
+  </view>
+  <!-- 描述 -->
+  <view class="cu-form-group">
+    <textarea maxlength="-1" disabled="{{modalName!=null}}" bindinput="textareaAInput" placeholder="请输入签到描述"></textarea>
+  </view>
+  <!-- 报名说明 -->
+  <view class="cu-form-group">
+    <textarea maxlength="-1" disabled="{{modalName!=null}}" bindinput="textareaAInput" placeholder="请输入签到说明"></textarea>
+  </view>
+  <!-- 日期时间选择 -->
+  <view class="cu-form-group">
+    <view class="title">截止日期</view>
+    <picker mode="date" value="{{date3}}" start="2000-01-01" end="2100-12-31" bindchange="DateChange3">
+      <view class="picker">
+        {{date3}}
+      </view>
+    </picker>
+  </view>
+  <view class="cu-form-group">
+    <view class="title">截止时间</view>
+    <picker mode="time" value="{{time4}}" start="00:00" end="23:59" bindchange="TimeChange4">
+      <view class="picker">
+        {{time4}}
+      </view>
+    </picker>
+  </view>
+  <!-- 是否获取位置 -->
+  <view class="cu-form-group">
+		<view class="title">获取位置</view>
+		<switch class="orange radius sm" checked="{{getAdd?'true':''}}"  bindtap="setAdd"></switch>
+	</view>
+</form>
+
+<!-- 保存按钮 -->
+<view class=" flex flex-direction padding-bottom-lg margin-top">
+  <button class="cu-btn bg-green shadow" bindtap="showModal" data-target="Modal">发布</button>
+</view>
+
+<!-- 隐藏的model -->
+<view class="cu-modal {{modalName=='Modal'?'show':''}}">
+  <view class="cu-dialog">
+    <view class="cu-bar bg-white justify-end">
+      <view class="content">报名结果</view>
+      <view class="action" bindtap="hideModal">
+        <text class="cuIcon-close text-red"></text>
+      </view>
+    </view>
+    <view class="padding-xl">
+      报名成功
+    </view>
+  </view>
+</view>

@@ -1,0 +1,72 @@
+<!--pages/play/signInput/signInput.wxml-->
+
+<view class="bg-gradual-blue light padding radius text-center shadow-blur">
+  <!-- 头部导航 -->
+  <cu-custom isBack="{{true}}">
+    <view slot="backText">返回</view>
+    <view slot="content">签到</view>
+  </cu-custom>
+  <!-- 签到按钮 -->
+  <view class="UCenter-bg">
+    <!-- 环形 -->
+    <view>
+      <!-- 外圆 -->
+      <view class='bigCircle'></view>
+      <!-- 内圆 -->
+
+      <view url="/pages/play/sign/sign" class='littleCircle UCenter-bg'>
+        <!--UCenter-bg可以中心居中-->
+        <text class="text-black text-bold padding-bottom-xl" style="font-size:50rpx" wx:if="{{!isSign}}">签到</text>
+        <text class="text-blue text-bold padding-bottom-xl" style="font-size:50rpx" wx:if="{{isSign}}">已签到</text>
+      </view>
+
+      <!-- 画布：绘制百分比字符和环形进度条。画布在最上层，所以点击的是画布 -->
+      <view bindtap="Sign">
+        <canvas canvas-id="runCanvas" id="runCanvas" class='canvas'></canvas>
+      </view>
+    </view>
+  </view>
+</view>
+
+<!-- 列表标题 -->
+<view class=" bg-white solid-bottom margin-top">
+  <!-- 标题 -->
+  <view class="cu-bar bg-white margin-top">
+    <view class="action">
+      <text class="cuIcon-title text-orange "></text> 签到说明
+    </view>
+  </view>
+  <!-- 说明 -->
+  <view class="padding-bottom padding-lr text-sm">
+    <view class="padding-bottom-xs text-bold">英语听力比赛签到</view>
+    <view class="">听力播放开始：衬衫的价格是九磅十五便士……</view>
+  </view>
+</view>
+
+<view class=" bg-white solid-bottom margin-top" style="h">
+  <!-- 标题 -->
+</view>
+<form>
+  <view class="cu-form-group">
+    <view class="title">姓名</view>
+    <input placeholder="好人"></input>
+  </view>
+  <view class="cu-form-group">
+    <view class="title">学号</view>
+    <input placeholder="3172090546426"></input>
+  </view>
+  <view class="cu-form-group">
+    <view class="title">专业班级</view>
+    <input placeholder="摸鱼17-1班"></input>
+  </view>
+  <view class="cu-form-group">
+    <view class="title">位置</view>
+    <input placeholder="xx省xx市xx区xx……"></input>
+    <button class="cu-btn bg-white shadow">查看明细</button>
+  </view>
+  <view class="cu-form-group">
+    <view class="title">手机号码</view>
+    <input placeholder="13564946545"></input>
+    <!-- <text class="cuIcon-locationfill text-orange"></text> -->
+  </view>
+</form>

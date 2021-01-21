@@ -1,11 +1,24 @@
-// pages/play/register/register.js
+// pages/play/registerInput/registerInput.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    
+    modalName: true,  // 控制model是否显示
+  },
+
+  // 显示model
+  showModal(e) {
+    this.setData({
+      modalName: e.currentTarget.dataset.target
+    })
+  },
+  // 隐藏model
+  hideModal(e) {
+    this.setData({
+      modalName: null
+    })
   },
 
   /**

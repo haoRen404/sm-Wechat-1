@@ -1,0 +1,89 @@
+/* pages/play/signInput/signInput.wxss */
+
+@import "/colorui/main.wxss";
+@import "/colorui/icon.wxss";
+
+.UCenter-bg {
+  /*背景图*/
+  /* background-image: url(https://hbimg.huabanimg.com/5e10f71579ce12768e9f7d90717fb9a0b76246072289a-RPp1Go_fw658/format/webp); */
+  background-size: cover;
+  height: 450rpx; /*背景的高度*/
+  display: flex;
+  justify-content: center;
+  padding-top: 40rpx;
+  overflow: hidden;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  color: #fff;
+  font-weight: 300;
+  text-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+}
+
+.UCenter-bg text {
+  opacity: 0.8;
+}
+
+.UCenter-bg image {
+  width: 200rpx;
+  height: 200rpx;
+}
+
+.UCenter-bg .gif-wave{
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  z-index: 99;
+  mix-blend-mode: screen;  
+  height: 100rpx;   
+}
+
+
+/* 环形部分的样式 */
+/* 外圆的样式 */
+.bigCircle{
+  width: 420rpx;
+  height: 420rpx;
+  border-radius: 50%;
+  position: absolute;
+  top:0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto auto;
+  background-color: #ddd;
+}
+
+/* 内圆的样式 */
+.littleCircle{
+  width: 356rpx;
+  height: 356rpx;
+  border-radius: 50%;
+  position: absolute;
+  top:0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto auto;
+  background-color: #eee;
+}
+
+/* 画布的样式 */
+.canvas{
+  width: 420rpx;
+  height: 420rpx;
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto auto;
+  z-index: 99;
+}
+
+
+/* 控制表单第二列左侧缩进 */
+.cu-form-group .title {
+  min-width: calc(4em + 30rpx);
+}

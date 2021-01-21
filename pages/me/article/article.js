@@ -1,11 +1,11 @@
-// pages/play/register/register.js
+// pages/me/article/article.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    
+
   },
 
   /**

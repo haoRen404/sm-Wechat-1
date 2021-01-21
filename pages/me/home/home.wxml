@@ -7,13 +7,14 @@
 
 <scroll-view scroll-y class="scrollPage">
   <view class="UCenter-bg">
-    <image src="/images/logo.png" class="png" mode="widthFix"></image>
-    <view class="text-xl text-bold padding-top">是好人呀</view>
+    <image src="/images/logo.png" class="png" mode="widthFix" bindtap="ViewImage"></image>
+    <view class="text-xl text-bold padding-top">
+      是好人呀
+      <view class="cu-tag sm bg-red">社团</view>
+    </view>
     <view class="margin-top-sm">
       <text>复杂的世界,做一个好人就好!</text>
     </view>
-    <!-- 倒影图 -->
-    <!-- <image src="/images/logo.png" mode="scaleToFill" class="gif-wave"></image> -->
   </view>
 </scroll-view>
 
@@ -49,11 +50,25 @@
       <text class="text-grey">编辑资料</text>
     </navigator>
   </view>
-  <view class="cu-item arrow">
-    <navigator class="content" url="/pages/me/message/message" hover-class="none">
-      <text class="cuIcon-attentionfavorfill text-green"></text>
-      <text class="text-grey">个人日志</text>
+  <view class="cu-item arrow" wx:if="{{isAdmin}}">
+    <navigator class="content" url="/pages/me/article/article" hover-class="none">
+      <text class="cuIcon-icon text-green"></text>
+      <text class="text-grey">我的发表</text>
+      <view class="cu-tag sm bg-red">管理</view>
     </navigator>
+  </view>
+  <view class="cu-item arrow" wx:if="{{isAdmin}}">
+    <navigator class="content" url="/pages/me/release/release" hover-class="none">
+      <text class="cuIcon-btn text-green"></text>
+      <text class="text-grey">我的发布</text>
+      <view class="cu-tag sm bg-red">管理</view>
+    </navigator>
+  </view>
+  <view class="cu-item arrow">
+    <view class="content" hover-class="none" bindtap="Exit">
+      <text class="cuIcon-exit text-green"></text>
+      <text class="text-grey">退出登录</text>
+    </view>
   </view>
 </view>
 

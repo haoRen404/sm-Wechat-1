@@ -1,0 +1,76 @@
+<!--pages/play/registerInput/registerInput.wxml-->
+
+<!-- 头部导航 -->
+<cu-custom bgColor="bg-gradual-pink" isBack="{{true}}">
+  <view slot="backText">返回</view>
+  <view slot="content">报名</view>
+</cu-custom>
+
+<!-- 列表标题 -->
+<view class=" bg-white solid-bottom margin-top">
+  <!-- 标题 -->
+  <view class="cu-bar bg-white margin-top">
+    <view class="action">
+      <text class="cuIcon-title text-orange "></text> 报名说明
+    </view>
+  </view>
+  <!-- 说明 -->
+  <view class="padding-bottom padding-lr">
+    <text>报名说明报名说明报名说明报名说明报名说明报名说明报名说明</text>
+  </view>
+</view>
+
+<!-- 表单的标题 -->
+<view class=" bg-white solid-bottom margin-top">
+  <!-- 说明 -->
+  <view class="padding-bottom padding-lr padding-top">
+    <text class="cuIcon-post text-orange"></text>
+    <text class="text-black text-bold"> 数独比赛报名</text>
+  </view>
+</view>
+
+<!-- 表单 -->
+<form>
+  <view class="cu-form-group">
+    <view class="title">姓名</view>
+    <input placeholder="请输入姓名"></input>
+  </view>
+  <view class="cu-form-group">
+    <view class="title">学号</view>
+    <input placeholder="请输入学号"></input>
+  </view>
+  <view class="cu-form-group">
+    <view class="title">专业班级</view>
+    <input placeholder="请输入专业班级"></input>
+  </view>
+  <view class="cu-form-group">
+    <view class="title">手机号码</view>
+    <input placeholder="请输入手机号码"></input>
+    <!-- <text class="cuIcon-locationfill text-orange"></text> -->
+  </view>
+  <view class="cu-form-group">
+    <view class="title">QQ</view>
+    <input placeholder="请输入QQ号码"></input>
+    <!-- <button class="cu-btn bg-green shadow">验证码</button> -->
+  </view>
+</form>
+
+<!-- 保存按钮 -->
+<view class=" flex flex-direction padding-bottom-lg margin-top">
+  <button class="cu-btn bg-green shadow" bindtap="showModal" data-target="Modal">保存</button>
+</view>
+
+<!-- 隐藏的model -->
+<view class="cu-modal {{modalName=='Modal'?'show':''}}">
+  <view class="cu-dialog">
+    <view class="cu-bar bg-white justify-end">
+      <view class="content">报名结果</view>
+      <view class="action" bindtap="hideModal">
+        <text class="cuIcon-close text-red"></text>
+      </view>
+    </view>
+    <view class="padding-xl">
+      报名成功
+    </view>
+  </view>
+</view>

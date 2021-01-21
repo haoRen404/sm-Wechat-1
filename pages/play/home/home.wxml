@@ -13,19 +13,19 @@
     <text class="cuIcon-search"></text>
     <input type="text" placeholder="输入活动码进行搜索" confirm-type="search"></input>
   </view>
-  <view class="action" wx:if="{{true}}">
+  <navigator url="/pages/play/publish/publish" class="action padding-tb-sm" wx:if="{{true}}">
     <text class="cuIcon-add"></text>
-    <text>发布</text>
-  </view>
+    <text> 发布</text>
+  </navigator>
 </view>
 
 <!-- 导航 -->
 <scroll-view scroll-x class="bg-white nav">
   <view class="flex text-center">
-    <navigator url="/pages/play/register/register" class="cu-item flex-sub" bindtap="tabSelect" data-id="{{index}}">
+    <navigator url="/pages/play/register/register" class="cu-item flex-sub">
       报名
     </navigator>
-    <navigator url="/pages/play/sign/sign" class="cu-item flex-sub" bindtap="tabSelect" data-id="{{index}}">
+    <navigator url="/pages/play/sign/sign" class="cu-item flex-sub">
       签到
     </navigator>
   </view>
@@ -35,9 +35,9 @@
 <view class="cu-card article">
   <view class="cu-item" wx:for="{{5}}">
     <!-- 活动标题 -->
-    <view class="title">
-      <view class="text-cut">数独比赛</view>
-    </view>
+    <navigator url="/pages/play/registerInput/registerInput" class="title">
+      <text class="cuIcon-activityfill text-orange"></text> 数度比赛
+    </navigator>
     <!--中间部分-->
     <view class="content">
       <!-- 活动首图 -->
@@ -66,12 +66,11 @@
       </view>
     </view>
     <!-- 三角号 -->
-    <view class="padding-top-sm text-center bg-white" bindtap="showModal">
+    <!-- <view class="padding-top-sm text-center bg-white" bindtap="showModal">
       <text class="cuIcon-{{modalName?'unfold':'fold'}}"></text>
-    </view>
+    </view> -->
     <!-- 隐藏的modal -->
-    <view hidden="{{modalName}}" class="padding-top-xs text-center">
-      <!--hidden控制隐藏-->
+    <!-- <view hidden="{{modalName}}" class="padding-top-xs text-center">
       <scroll-view scroll-x="true" class="cu-dialog">
         <view class="padding-xl nav">
           <button class="cu-btn round bg-red shadow margin-right-xs">详情</button>
@@ -81,7 +80,7 @@
           <button class="cu-btn round bg-mauve shadow margin-right-xs">通知</button>
         </view>
       </scroll-view>
-    </view>
+    </view> -->
   </view>
 </view>
 

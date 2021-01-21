@@ -46,12 +46,11 @@
       </view>
     </view>
     <!-- 三角号 -->
-    <view class="padding-top-sm text-center bg-white" bindtap="showModal">
+    <!-- <view class="padding-top-sm text-center bg-white" bindtap="showModal">
       <text class="cuIcon-{{modalName?'unfold':'fold'}}"></text>
-    </view>
+    </view> -->
     <!-- 隐藏的modal -->
-    <view hidden="{{modalName}}" class="padding-top-xs text-center">
-      <!--hidden控制隐藏-->
+    <!-- <view hidden="{{modalName}}" class="padding-top-xs text-center">
       <scroll-view scroll-x="true" class="cu-dialog">
         <view class="padding-xl nav">
           <button class="cu-btn round bg-red shadow margin-right-xs">详情</button>
@@ -61,6 +60,6 @@
           <button class="cu-btn round bg-mauve shadow margin-right-xs">通知</button>
         </view>
       </scroll-view>
-    </view>
+    </view> -->
   </view>
 </view>

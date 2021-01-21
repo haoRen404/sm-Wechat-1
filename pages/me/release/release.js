@@ -1,12 +1,23 @@
-// pages/play/register/register.js
+// pages/me/release/release.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    
+    tabTitle: [{title: "发布活动"}, {title: "发布报名"}, {title: "发布签到"}],
+    TabCur: 0,
+    scrollLeft:0,
   },
+
+// 顶部导航
+tabSelect(e) {
+  this.setData({
+    TabCur: e.currentTarget.dataset.id,
+    scrollLeft: (e.currentTarget.dataset.id-1)*60
+  })
+},
+
 
   /**
    * 生命周期函数--监听页面加载
