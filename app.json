@@ -1,8 +1,12 @@
 {
   "pages": [
     "pages/index/index",
+
     "pages/home/home/home",
+    
     "pages/community/home/home",
+    "pages/community/details/details",
+    "pages/community/comments/comments",
     
     "pages/play/home/home",
     "pages/play/register/register",

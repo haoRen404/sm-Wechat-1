@@ -7,6 +7,7 @@ Page({
    * 页面的初始数据
    */
   data: {
+    avatar: "https://hbimg.huabanimg.com/8a9d13d7ed72acd7a34b0c0f2bb3d79080c362d8af2d-OF5pWW_fw658/format/webp",// 头像链接
     // 是否隐藏modal
     modalName: true,
     // 活动数据

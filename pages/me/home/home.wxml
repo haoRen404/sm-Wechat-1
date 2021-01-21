@@ -7,7 +7,8 @@
 
 <scroll-view scroll-y class="scrollPage">
   <view class="UCenter-bg">
-    <image src="/images/logo.png" class="png" mode="widthFix" bindtap="ViewImage"></image>
+    <!-- 头像 -->
+    <image src="{{avatar}}" class="png roundChartr" mode="widthFix"></image>
     <view class="text-xl text-bold padding-top">
       是好人呀
       <view class="cu-tag sm bg-red">社团</view>

@@ -5,14 +5,15 @@ Page({
    * 页面的初始数据
    */
   data: {
-    isAdmin: true,
+    avatar: "https://hbimg.huabanimg.com/8a9d13d7ed72acd7a34b0c0f2bb3d79080c362d8af2d-OF5pWW_fw658/format/webp",// 头像链接
+    isAdmin: true,// 是否是管理员
     imgList: [],// 图片列表
   },
 
   Exit(e) {
     wx.showModal({
       title: '退出确认',
-      content: '确定要删除这个好看的头像吗？',
+      content: '你真的要走了吗？',
       cancelText: '取消',
       confirmText: '确认',
       success: res => {

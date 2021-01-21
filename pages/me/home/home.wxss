@@ -20,6 +20,14 @@
   text-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
 }
 
+/* 让图片变圆 */
+.roundChartr {
+  /* width: 140rpx; */
+  /* height: 140rpx; */
+  border-radius: 50%;
+  overflow:hidden;
+}
+
 .UCenter-bg text {
   opacity: 0.8;
 }

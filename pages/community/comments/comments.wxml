@@ -1,0 +1,35 @@
+<!--pages/community/comments/comments.wxml-->
+
+<!-- 头部导航 -->
+<cu-custom bgColor="bg-gradual-pink" isBack="{{true}}">
+  <view slot="backText">返回</view>
+  <view slot="content">评论详情</view>
+</cu-custom>
+
+
+<view class="cu-list menu-avatar comment">
+  <view class="cu-item padding-top-sm" wx:for="{{5}}">
+    <view class="cu-avatar round" style="background-image:url(https://ossweb-img.qq.com/images/lol/img/champion/Morgana.png);"></view>
+    <view class="content">
+      <view class="text-grey">莫甘娜</view>
+      <navigator url="/pages/community/comments/comments" class="text-gray text-content text-df">
+        凯尔，你被自己的光芒变的盲目。
+      </navigator>
+      <view class="bg-grey padding-tb-xs padding-lr-sm radius margin-top-sm text-sm">
+        <view class="flex">
+          <view>凯尔：</view>
+          <view class="flex-sub">妹妹，你在帮他们给黑暗找借口吗?</view>
+        </view>
+      </view>
+      <view class="margin-top-sm flex justify-between">
+        <view class="text-gray text-df">2018年12月4日</view>
+        <view class="text-lg">
+          <!-- 点赞 -->
+          <text class="cuIcon-appreciatefill text-red"></text>
+          <!-- 评论 -->
+          <text class="cuIcon-messagefill text-gray margin-left-sm"></text>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
