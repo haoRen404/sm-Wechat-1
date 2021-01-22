@@ -1,0 +1,48 @@
+<!--pages/community/edit/edit.wxml-->
+
+<!-- 头部导航 -->
+<cu-custom bgColor="bg-gradual-pink" isBack="{{true}}">
+  <view slot="backText">返回</view>
+  <!-- <view slot="content">收藏列表</view> -->
+</cu-custom>
+
+<form class="bg-white">
+  <!-- 发送 -->
+  <view class="flex bg-white justify-end padding-right-xl">
+    <view class="text-lg padding-top-lg">发表</view>
+  </view>
+  <!-- 输入框 -->
+  <view class="padding-left-lg padding-top-lg bg-white text-lg">
+    <textarea maxlength="-1" disabled="{{modalName!=null}}" bindinput="textareaAInput" placeholder="分享新鲜事..."></textarea>
+  </view>
+  <!-- 图片上传 -->
+  <view class="bg-white padding-lr-lg">
+    <view class="grid col-3 grid-square flex-sub"><!--col-4:控制图片列数-->
+      <!-- 展示所选择的图片 -->
+      <view class="bg-img" wx:for="{{imgList}}" wx:key="{{index}}" bindtap="ViewImage" data-url="{{imgList[index]}}">
+        <image src='{{imgList[index]}}' mode='aspectFill'></image>
+        <view class="cu-tag bg-red" catchtap="DelImg" data-index="{{index}}">
+          <text class="cuIcon-close"></text>
+        </view>
+      </view>
+      <!-- 添加图片的框 -->
+      <view class="solids" bindtap="ChooseImage" wx:if="{{imgList.length<9}}">
+        <!--{{imgList.length<1}}控制图片数量-->
+        <text class="cuIcon-cameraadd text-lg"></text>
+      </view>
+    </view>
+  </view>
+  <!-- 图片数量提醒 cu-bar-->
+  <view class="flex bg-white justify-end padding-right-lg">
+      {{imgList.length}}/9
+  </view>
+  <!-- 选择分类 -->
+  <view class="cu-form-group margin-top">
+		<view class="title">分类</view>
+		<picker bindchange="PickerChange" value="{{index}}" range="{{picker}}">
+			<view class="picker">
+				{{index?picker[index]:'校园趣事'}}
+			</view>
+		</picker>
+	</view>
+</form>

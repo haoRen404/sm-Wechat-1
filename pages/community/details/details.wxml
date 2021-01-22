@@ -6,6 +6,23 @@
   <!-- <view slot="content">收藏列表</view> -->
 </cu-custom>
 
+<!-- 进行评论的输入框 -->
+<view class="cu-bar foot input {{InputBottom!=0?'cur':''}}" bindtap="hideIcon" style="bottom:{{InputBottom}}px" hidden="{{hiddenInput}}">
+  <!-- 取消按钮 -->
+  <view class="action" bindtap="hiddenInput">
+    <text class="cuIcon-unfold text-grey"></text>
+  </view>
+  <!-- 输入框 -->
+  <input class="solid-bottom" focus="{{inputShowed}}" bindfocus="InputFocus" bindblur="InputBlur" adjust-position="{{false}}" focus="{{false}}" maxlength="300" cursor-spacing="10"></input>
+  <!-- 表情按钮 -->
+  <view class="action">
+    <text class="cuIcon-emojifill text-grey"></text>
+  </view>
+  <!-- 发送按钮 -->
+  <button class="cu-btn bg-green shadow">发送</button>
+</view>
+
+<!-- 帖子 -->
 <view class="cu-card no-card dynamic">
   <view class="cu-item shadow no-card padding-top-lg">
     <!-- 第一部分：账号及时间 -->
@@ -40,7 +57,7 @@
       <!-- 收藏 -->
       <text class="cuIcon-favorfill margin-lr-xs text-red"></text>
       <!-- 评论 -->
-      <text class="cuIcon-messagefill margin-lr-xs"></text>
+      <text class="cuIcon-messagefill margin-lr-xs" bindtap="ShowInput"></text>
       <!-- 分享 -->
       <text class="cuIcon-forwardfill margin-lr-xs"></text>
     </view>
@@ -67,20 +84,20 @@
       style="background-image:url(https://hbimg.huabanimg.com/8a9d13d7ed72acd7a34b0c0f2bb3d79080c362d8af2d-OF5pWW_fw658/format/webp);"></view>
     <view class="content">
       <view class="text-grey">是好人呀</view>
-      <navigator url="/pages/community/comments/comments" class="text-gray text-content text-df">
+      <navigator url="/pages/community/reply/reply" class="text-gray text-content text-df">
         今晚夜色真美，风也温柔。
       </navigator>
       <view class="margin-top-sm flex justify-between">
         <view class="text-gray text-df">2021/01/21 22:59</view>
-        <view class="text-lg">
+        <view class="text-lg text-gray">
           <!-- 点赞 -->
           <text class="cuIcon-appreciatefill text-red"></text>
           <!-- 评论 -->
-          <text class="cuIcon-messagefill text-gray margin-left-sm"></text>
+          <text class="cuIcon-messagefill margin-lr-xs" bindtap="ShowInput"></text>
         </view>
       </view>
       <!-- 评论条数提醒 -->
-      <navigator url="/pages/community/comments/comments" class="padding-top-sm bg-white solid-bottom">
+      <navigator url="/pages/community/comments/comments" class="padding-top-sm bg-white ">
         <view class="cu-tag line-grey round df">
           11条评论
           <text class="cuIcon-right text-gray margin-left-sm"></text>

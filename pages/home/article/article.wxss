@@ -1,0 +1,5 @@
+/* pages/home/article/article.wxss */
+
+page {
+  background: #ffffff;
+}

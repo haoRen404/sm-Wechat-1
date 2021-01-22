@@ -3,10 +3,12 @@
     "pages/index/index",
 
     "pages/home/home/home",
+    "pages/home/article/article",
     
     "pages/community/home/home",
     "pages/community/details/details",
     "pages/community/comments/comments",
+    "pages/community/edit/edit",
     
     "pages/play/home/home",
     "pages/play/register/register",

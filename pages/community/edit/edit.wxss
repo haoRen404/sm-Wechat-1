@@ -1,0 +1,6 @@
+/* pages/community/edit/edit.wxss */
+
+/* 设置页面的背景颜色 */
+page {
+  background-color: #fff;/*设置页面背景颜色只支持十六进制*/
+}

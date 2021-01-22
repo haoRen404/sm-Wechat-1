@@ -1,0 +1,43 @@
+<!--pages/home/article/article.wxml-->
+
+<!-- 头部导航 -->
+<cu-custom bgColor="bg-gradual-pink" isBack="{{true}}">
+  <view slot="backText">返回</view>
+  <!-- <view slot="content">评论详情</view> -->
+</cu-custom>
+
+<!-- 标题 -->
+<view class="padding-lr padding-top">
+  <text class="text-black text-bold text-xl">《小丑》，一部我不想推荐的年度杰作</text>
+</view>
+
+<!-- 作者和时间 -->
+<view class="flex justify-start padding-lr padding-tb-sm text-sm">
+  <view class="cu-tag radius sm">原创</view>
+  <view class="padding-left-xs">电影最TOP</view>
+  <view class="padding-left-xs">2019-11-14 23:11:38</view>
+</view>
+
+<!-- 标签 -->
+<view class="padding-lr padding-bottom-sm solid-bottom">
+  <view class="cu-tag radius sm" wx:for="{{5}}">圆角</view>
+</view>
+
+<!-- 文章内容 -->
+<view class="padding">
+  <view class="padding-bottom-xs">
+    <text class="text-black text-df">要说近一个月世界影坛最火的电影，那必须一定是杰昆•菲尼克斯主演的《小丑》，没有之一。</text>
+  </view>
+  <view class="padding-bottom-xs">
+    <image src='https://p3-tt.byteimg.com/origin/pgc-image/6c2046f561214a2389d0a2cd2608f56c?from=pc'></image>
+  </view>
+  <view class="padding-bottom-xs">
+    <text class="text-black text-df">今年的威尼斯电影节上《小丑》拿下了金狮，成为首部获得三大电影节的漫改片。男主杰昆的表现绝对有资格当影帝，但受传统所限（每部作品只能拿一项），杰昆没能亲手举起个人荣誉奖杯，但他的演出获得一致肯定，可以算无冕之王</text>
+  </view>
+  <view class="padding-bottom-xs">
+    <image src='https://p3-tt.byteimg.com/origin/pgc-image/d47b85f489a14b5393c148be0dae1a46?from=pc'></image>
+  </view>
+  <view class="padding-bottom-xs">
+    <text class="text-black text-df">每年都有金狮金熊金棕榈，它们代表着艺术成就，和票房冠军不是一个象限的，但这次不同。截止到昨天（11月13日），《小丑》在北美已经拿下了3.15亿票房，全球达到9.88亿，10亿大关近在咫尺，货币单位是美元。</text>
+  </view>
+</view>

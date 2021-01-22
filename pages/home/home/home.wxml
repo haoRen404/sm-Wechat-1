@@ -28,25 +28,44 @@
   </view>
 </scroll-view>
 
+<!-- 进行评论的输入框 -->
+<view class="cu-bar foot input {{InputBottom!=0?'cur':''}}" bindtap="hideIcon" style="bottom:{{InputBottom}}px" hidden="{{hiddenInput}}">
+  <!-- 取消按钮 -->
+  <view class="action" bindtap="hiddenInput">
+    <text class="cuIcon-unfold text-grey"></text>
+  </view>
+  <!-- 输入框 -->
+  <input class="solid-bottom" focus="{{inputShowed}}" bindfocus="InputFocus" bindblur="InputBlur" adjust-position="{{false}}" focus="{{false}}" maxlength="300" cursor-spacing="10"></input>
+  <!-- 表情按钮 -->
+  <view class="action">
+    <text class="cuIcon-emojifill text-grey"></text>
+  </view>
+  <!-- 发送按钮 -->
+  <button class="cu-btn bg-green shadow">发送</button>
+</view>
+
 <!-- 文章列表 -->
 <view class="cu-card case">
   <view class="cu-item shadow" wx:for="{{5}}" wx:key>
-    <!-- 图片 -->
-    <view class="image">
-      <image src="https://ossweb-img.qq.com/images/lol/web201310/skin/big10006.jpg" mode="widthFix"></image>
-      <view class="cu-tag bg-blue">原创</view>
-    </view>
-    <!-- 标题和详情 -->
-    <view class="cu-list menu-avatar">
-      <!-- 标题 -->
-      <view class="text-df padding-lr padding-top text-bold">
-        专注视觉的小程序组件库
+    <!-- 包裹图片、标题、简介，为了进行模拟跳转 -->
+    <navigator url="/pages/home/article/article">
+      <!-- 图片 -->
+      <view class="image">
+        <image src="https://ossweb-img.qq.com/images/lol/web201310/skin/big10006.jpg" mode="widthFix"></image>
+        <view class="cu-tag bg-blue">原创</view>
       </view>
-      <!-- 详情 -->
-      <view class="text-sm padding-lr padding-top-xs">
-        衬衫的价格是9磅15便士，衬衫的价格是9磅15便士，衬衫的价格是9磅15便士，衬衫的价格是9磅15便士，
+      <!-- 标题和详情 -->
+      <view class="cu-list menu-avatar">
+        <!-- 标题 -->
+        <view class="text-df padding-lr padding-top text-bold">
+          专注视觉的小程序组件库
+        </view>
+        <!-- 详情 -->
+        <view class="text-sm padding-lr padding-top-xs">
+          衬衫的价格是9磅15便士，衬衫的价格是9磅15便士，衬衫的价格是9磅15便士，衬衫的价格是9磅15便士，
+        </view>
       </view>
-    </view>
+    </navigator>
     <!-- 文章数据 -->
     <view class="cu-item text-ms">
       <view class="flex-sub padding">  <!--content-->
@@ -60,7 +79,7 @@
           <view class="text-gray">
             <text class="cuIcon-attentionfavor margin-lr-xs"></text> 100
             <text class="cuIcon-appreciate margin-lr-xs"></text> 200
-            <text class="cuIcon-comment margin-lr-xs"></text> 300
+            <text class="cuIcon-messagefill margin-lr-xs" bindtap="ShowInput"></text> 300
           </view>
         </view>
       </view>

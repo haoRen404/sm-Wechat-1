@@ -1,24 +1,25 @@
-// pages/home/home/home.js
+// pages/community/edit/edit.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    avatar: "https://hbimg.huabanimg.com/8a9d13d7ed72acd7a34b0c0f2bb3d79080c362d8af2d-OF5pWW_fw658/format/webp",// 头像链接
-    TabCur: 0,// 第几个tab
-    scrollLeft:0,
     InputBottom: 50,//输入框距离底部的高度
     hiddenInput: true,// 隐藏输入框
+    imgList: [],// 图片列表
+    index: null,//分类中第几个
+    picker: ['校园趣事', '学术交流', '数学求助', '寻物启事', '爱情树洞'],//分类列表
   },
 
-  // 滑动tab的相关方法
-  tabSelect(e) {
+  // 分类选择，点确定时修改index
+  PickerChange(e) {
+    console.log(e);
     this.setData({
-      TabCur: e.currentTarget.dataset.id,
-      scrollLeft: (e.currentTarget.dataset.id-1)*60
+      index: e.detail.value
     })
   },
+
   // 输入框聚焦时
   InputFocus(e) {
     this.setData({
@@ -47,6 +48,50 @@ Page({
     })
     console.log(this.data.hiddenInput)
   },
+  // 选择图片
+  ChooseImage() {
+    wx.chooseImage({
+      count: 9, //默认9
+      sizeType: ['original', 'compressed'], //可以指定是原图还是压缩图，默认二者都有
+      sourceType: ['album'], //从相册选择
+      success: (res) => {
+        if (this.data.imgList.length != 0) {
+          this.setData({
+            imgList: this.data.imgList.concat(res.tempFilePaths)
+          })
+        } else {
+          this.setData({
+            imgList: res.tempFilePaths
+          })
+        }
+      }
+    });
+  },
+  // 查看图片
+  ViewImage(e) {
+    wx.previewImage({
+      urls: this.data.imgList,
+      current: e.currentTarget.dataset.url
+    });
+  },
+  // 删除图片，弹出提示框
+  DelImg(e) {
+    wx.showModal({
+      title: '删除确认',
+      content: '确定要删除这个好看的头像吗？',
+      cancelText: '取消',
+      confirmText: '确认',
+      success: res => {
+        if (res.confirm) {
+          this.data.imgList.splice(e.currentTarget.dataset.index, 1);
+          this.setData({
+            imgList: this.data.imgList
+          })
+        }
+      }
+    })
+  },
+
 
   /**
    * 生命周期函数--监听页面加载

@@ -9,16 +9,51 @@ Page({
   data: {
     avatar: "https://hbimg.huabanimg.com/8a9d13d7ed72acd7a34b0c0f2bb3d79080c362d8af2d-OF5pWW_fw658/format/webp",// 头像链接
     TabCur: 0,// 第几个tab
-    scrollLeft:0
-    // CustomBar: app.globalData.CustomBar,
+    scrollLeft:0,
+    InputBottom: 50,//输入框距离底部的高度
+    hiddenInput: true,// 隐藏输入框
   },
 
+  // 输入框聚焦时
+  InputFocus(e) {
+    this.setData({
+      InputBottom: e.detail.height
+    })
+  },
+  // 输入框失去焦点时
+  InputBlur(e) {
+    this.setData({
+      InputBottom: 50,
+      hiddenInput: true,
+    })
+    console.log(this.data.hiddenInput)
+  },
+  // 显示输入框
+  ShowInput(){
+    this.setData({
+      hiddenInput: false,
+    })
+    console.log(this.data.hiddenInput)
+  },
+  // 隐藏输入框
+  hiddenInput(){
+    this.setData({
+      hiddenInput: true,
+    })
+    console.log(this.data.hiddenInput)
+  },
   // 滑动tab的相关方法
   tabSelect(e) {
     this.setData({
       TabCur: e.currentTarget.dataset.id,
       scrollLeft: (e.currentTarget.dataset.id-1)*60
     })
+  },
+  // 跳转回复页面
+  goReply(){
+    wx.navigateTo({
+      url: '/pages/community/reply/reply'
+     })
   },
 
   // // 显示modal
