@@ -1,0 +1,4 @@
+/* component/myBottom/myBottom.wxss */
+
+@import "/colorui/main.wxss";
+@import "/colorui/icon.wxss";

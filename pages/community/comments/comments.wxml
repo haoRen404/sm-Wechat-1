@@ -1,51 +1,11 @@
 <!--pages/community/comments/comments.wxml-->
 
 <!-- 头部导航 -->
-<cu-custom bgColor="bg-gradual-pink" isBack="{{true}}">
+<!-- <cu-custom bgColor="bg-gradual-pink" isBack="{{true}}">
   <view slot="backText">返回</view>
   <view slot="content">评论详情</view>
-</cu-custom>
+</cu-custom> -->
+<myHeadMenuTwo backText="返回" headTitle="评论详情"></myHeadMenuTwo>
 
-<!-- 进行评论的输入框 -->
-<view class="cu-bar foot input {{InputBottom!=0?'cur':''}}" bindtap="hideIcon" style="bottom:{{InputBottom}}px" hidden="{{hiddenInput}}">
-  <!-- 取消按钮 -->
-  <view class="action" bindtap="hiddenInput">
-    <text class="cuIcon-unfold text-grey"></text>
-  </view>
-  <!-- 输入框 -->
-  <input class="solid-bottom" focus="{{inputShowed}}" bindfocus="InputFocus" bindblur="InputBlur" adjust-position="{{false}}" focus="{{false}}" maxlength="300" cursor-spacing="10"></input>
-  <!-- 表情按钮 -->
-  <view class="action">
-    <text class="cuIcon-emojifill text-grey"></text>
-  </view>
-  <!-- 发送按钮 -->
-  <button class="cu-btn bg-green shadow">发送</button>
-</view>
-
-文章列表
-<view class="cu-list menu-avatar comment">
-  <view class="cu-item padding-top-sm" wx:for="{{5}}">
-    <view class="cu-avatar round" style="background-image:url(https://ossweb-img.qq.com/images/lol/img/champion/Morgana.png);"></view>
-    <view class="content">
-      <view class="text-grey">莫甘娜</view>
-      <view class="text-gray text-content text-df">
-        凯尔，你被自己的光芒变的盲目。
-      </view>
-      <view class="bg-grey padding-tb-xs padding-lr-sm radius margin-top-sm text-sm">
-        <view class="flex">
-          <view>凯尔：</view>
-          <view class="flex-sub">妹妹，你在帮他们给黑暗找借口吗?</view>
-        </view>
-      </view>
-      <view class="margin-top-sm flex justify-between">
-        <view class="text-gray text-df">2018年12月4日</view>
-        <view class="text-lg text-gray">
-          <!-- 点赞 -->
-          <text class="cuIcon-appreciatefill text-red"></text>
-          <!-- 评论 -->
-          0000000000000
-        </view>
-      </view>
-    </view>
-  </view>
-</view>
+<!-- 评论详情列表 -->
+<myCommentDetails></myCommentDetails>

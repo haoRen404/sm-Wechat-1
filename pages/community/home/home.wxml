@@ -1,10 +1,8 @@
 <!--pages/community/home/home.wxml-->
 
 <!-- 头部导航 -->
-<cu-custom bgImage="https://image.weilanwl.com/color2.0/plugin/cjkz2329.jpg">
-  <!--需要返回则添加isBack="{{true}}"-->
-  <view slot="content">社区</view>
-</cu-custom>
+<myHeadMenuOne headTitle="社区"></myHeadMenuOne>
+
 
 <!-- 发表和消息 -->
 <view class="cu-bar search bg-white">
@@ -13,8 +11,6 @@
     <text class="cuIcon-roundadd"></text>
     <text>发表</text>
   </navigator>
-  <!-- 头像 -->
-  <!-- <view class="cu-avatar round" style="background-image:url({{avatar}});"></view> -->
   <!-- 消息 -->
   <navigator url="/pages/me/message/message" class="action padding-right-xs">
     <text class="cuIcon-mark"></text>
@@ -33,66 +29,9 @@
   </view>
 </scroll-view>
 
-<!-- 进行评论的输入框 -->
-<view class="cu-bar foot input {{InputBottom!=0?'cur':''}}" bindtap="hideIcon" style="bottom:{{InputBottom}}px" hidden="{{hiddenInput}}">
-  <!-- 取消按钮 -->
-  <view class="action" bindtap="hiddenInput">
-    <text class="cuIcon-unfold text-grey"></text>
-  </view>
-  <!-- 输入框 -->
-  <input class="solid-bottom" focus="{{inputShowed}}" bindfocus="InputFocus" bindblur="InputBlur" adjust-position="{{false}}" focus="{{false}}" maxlength="300" cursor-spacing="10"></input>
-  <!-- 表情按钮 -->
-  <view class="action">
-    <text class="cuIcon-emojifill text-grey"></text>
-  </view>
-  <!-- 发送按钮 -->
-  <button class="cu-btn bg-green shadow">发送</button>
-</view>
-
 <!-- 贴子列表 -->
-<view class="cu-card dynamic">
-  <view class="cu-item shadow no-card" wx:for="{{5}}">
-    <!-- 第一部分：账号及时间 -->
-    <view class="cu-list menu-avatar">
-      <view class="cu-item">
-        <view class="cu-avatar round lg"
-          style="background-image:url(https://ossweb-img.qq.com/images/lol/web201310/skin/big10006.jpg);"></view>
-        <view class="content flex-sub">
-          <view>凯尔</view>
-          <view class="text-gray text-sm flex justify-between">
-            2021/01/21 22:59
-          </view>
-        </view>
-      </view>
-    </view>
-    <!-- 第二部分：帖子内容 -->
-    <navigator url="/pages/community/details/details" class="text-content">
-      折磨生出苦难，苦难又会加剧折磨，凡间这无穷的循环，将有我来终结！
-    </navigator>
-    <!-- 第三部分：图片 -->
-    <view class="grid flex-sub padding-lr col-3 grid-square">
-      <!--列数通过“col-3”来控制-->
-      <view class="bg-img"
-        style="background-image:url(https://ossweb-img.qq.com/images/lol/web201310/skin/big10006.jpg);" wx:for="{{9}}"
-        wx:key="{{index}}">
-      </view>
-    </view>
-    <!-- 第四部分：数据 -->
-    <view class="text-gray text-lg text-right padding">
-      <!-- <text class="cuIcon-attentionfill margin-lr-xs"></text>  -->
-      <!-- 点赞 -->
-      <text class="cuIcon-appreciatefill margin-lr-xs text-red"></text>
-      <!-- 收藏 -->
-      <text class="cuIcon-favorfill margin-lr-xs text-red"></text>
-      <!-- 评论 -->
-      <text class="cuIcon-messagefill margin-lr-xs" bindtap="ShowInput"></text>
-      <!-- 分享 -->
-      <text class="cuIcon-forwardfill margin-lr-xs"></text>
-    </view>
-  </view>
-</view>
+<myPostList></myPostList>
+
 
 <!-- 为了不让底部导航栏挡住内容 -->
-<view class="padding-top-xl">
-  <view class="padding-top-xl"></view>
-</view>
+<myBottomExposed></myBottomExposed>

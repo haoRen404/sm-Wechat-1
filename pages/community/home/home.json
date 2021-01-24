@@ -1,3 +1,7 @@
 {
-  "usingComponents": {}
+  "usingComponents": {
+    "myHeadMenuOne": "/component/myHeadMenuOne/myHeadMenuOne",
+    "myBottomExposed": "/component/myBottomExposed/myBottomExposed",
+    "myPostList": "/component/myPostList/myPostList"
+  }
 }

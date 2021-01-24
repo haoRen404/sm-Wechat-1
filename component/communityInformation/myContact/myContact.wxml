@@ -1,0 +1,22 @@
+<!--component/communityInformation/myContact/myContact.wxml-->
+
+<view class='margin-sm bg-white padding radius shadow-lg'>
+  <scroll-view scroll-y class="scrollPage">
+    <view class="UCenter-bg">
+      <image src="https://hbimg.huabanimg.com/07c5c6b2594743f800b7a06e7e735c2df29d29906278-eLuOXt_fw658/format/webp" class="png" mode="aspectFit"></image>
+      <view class="text-bold">微信公众号：桂工数模</view>
+    </view>
+  </scroll-view>
+
+  <view class="padding-tb-xl"></view>
+
+  <scroll-view scroll-y class="scrollPage">
+    <view class="UCenter-bg">
+      <image src="https://hbimg.huabanimg.com/3844d8ddd5dcdcb0e1cc2b5ab09d9f1eef0c7cd01fd6b-wL61PB_fw658/format/webp" class="png" mode="aspectFit"></image>
+      <view class="text-bold">
+        QQ：851839022
+        <text class="cuIcon-copy text-blue padding-left-xs text-lg"></text>
+      </view>
+    </view>
+  </scroll-view>
+</view>

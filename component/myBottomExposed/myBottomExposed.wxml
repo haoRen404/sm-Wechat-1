@@ -1,0 +1,6 @@
+<!--component/myBottomExposed/myBottomExposed.wxml-->
+
+<!-- 为了不让底部导航栏挡住内容 -->
+<view class="padding-top-xl">
+  <view class="padding-top-xl"></view>
+</view>

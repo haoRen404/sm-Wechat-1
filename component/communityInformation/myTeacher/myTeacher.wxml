@@ -1,0 +1,20 @@
+<!--component/communityInformation/myTeacher/myTeacher.wxml-->
+
+<view class='margin-sm bg-white padding radius shadow-lg'>
+  <view class="cu-card article no-card" wx:for="{{teacher}}">
+    <view class="cu-item shadow">
+      <view class="title">
+        <view class="text-cut">{{item.name}}老师</view>
+      </view>
+      <view class="content">
+        <image src="{{item.photo}}" mode="aspectFill"></image>
+        <view class="desc">
+          <view class="text-content">{{item.introduced}}</view>
+          <view>
+            <view class="cu-tag bg-green light sm round" wx:for="{{item.label}}">{{item.labelName}}</view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

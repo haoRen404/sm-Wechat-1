@@ -1,0 +1,52 @@
+<!--component/communityInformation/myAbout/myAbout.wxml-->
+
+<!-- 关于我们 -->
+<view class='margin-sm bg-white padding-xl radius shadow-lg'>
+  <!-- 标题 -->
+  <view class='text-center margin-bottom text-xl'>{{aboutTitle}}</view>
+  <!-- 会旗 -->
+  <image mode="aspectFit" src="https://hbimg.huabanimg.com/f24709b9c80d6c7ce49dba12df35a2d9e30222e26cb57-BD0YNX_fw658/format/webp"></image>
+  <!-- 内容 -->
+  <view class='text-content'>
+    <view class='margin-top-sm' wx:for="{{aboutContent}}">{{item.content}}</view>
+  </view>
+
+  <view class="padding-top-xl">
+    <view class="flex padding-bottom-xs solids-bottom">
+      <view class="flex-sub radius">中文名</view>
+      <view class="flex-treble radius">桂林理工大学数学建模协会</view>
+    </view>
+    <view class="flex padding-bottom-xs solids-bottom">
+      <view class="flex-sub radius">外文名</view>
+      <view class="flex-treble radius">Mathematical Modeling Association in Guilin University of Technology</view>
+    </view>
+    <view class="flex padding-bottom-xs solids-bottom">
+      <view class="flex-sub radius">中文简称</view>
+      <view class="flex-treble radius">桂工数模</view>
+    </view>
+    <view class="flex padding-bottom-xs solids-bottom">
+      <view class="flex-sub radius">英文简称</view>
+      <view class="flex-treble radius">GLUTSM</view>
+    </view>
+    <view class="flex padding-bottom-xs solids-bottom">
+      <view class="flex-sub radius">创办时间</view>
+      <view class="flex-treble radius">2005年11月</view>
+    </view>
+    <view class="flex padding-bottom-xs solids-bottom">
+      <view class="flex-sub radius">社团类型</view>
+      <view class="flex-treble radius">学术科技类</view>
+    </view>
+    <view class="flex padding-bottom-xs solids-bottom">
+      <view class="flex-sub radius">数模会训</view>
+      <view class="flex-treble radius">团结、奋进、务实、创新</view>
+    </view>
+    <view class="flex padding-bottom-xs solids-bottom">
+      <view class="flex-sub radius">宣传口号</view>
+      <view class="flex-treble radius">你因数模而成长，数模因你而不同</view>
+    </view>
+    <view class="flex padding-bottom-xs">
+      <view class="flex-sub radius">服务宗旨</view>
+      <view class="flex-treble radius">宣传数模、开展数模、强我数模</view>
+    </view>
+  </view>
+</view>

@@ -1,10 +1,7 @@
 <!--pages/home/home/home.wxml-->
 
 <!-- 头部导航 -->
-<cu-custom bgImage="https://image.weilanwl.com/color2.0/plugin/cjkz2329.jpg">
-  <!--需要返回则添加isBack="{{true}}"-->
-  <view slot="content">首页</view>
-</cu-custom>
+<myHeadMenuOne headTitle="首页"></myHeadMenuOne>
 
 <!-- 搜索框 -->
 <view class="cu-bar search bg-white">

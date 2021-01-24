@@ -1,0 +1,7 @@
+<!--component/myGrabSofa/myGrabSofa.wxml-->
+
+
+<!-- 抢沙发提醒，先隐藏 -->
+<view class='container' wx:if="{{myShow}}">
+  <text class='user-name text-grey'>还没有人评论，快抢占沙发吧！</text>
+</view>

@@ -1,0 +1,7 @@
+<!--component/myHeadMenuOne/myHeadMenuOne.wxml-->
+<!-- <text>component/myHeadMenuOne/myHeadMenuOne.wxml</text> -->
+
+<!-- 头部导航 -->
+<cu-custom bgImage="https://image.weilanwl.com/color2.0/plugin/cjkz2329.jpg">
+  <view slot="content">{{headTitle}}</view>
+</cu-custom>

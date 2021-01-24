@@ -39,7 +39,7 @@
       </view>
     </view>
     <!-- 第二部分：帖子内容 -->
-    <view class="text-content">
+    <view class="padding-lr padding-bottom">
       折磨生出苦难，苦难又会加剧折磨，凡间这无穷的循环，将有我来终结！
     </view>
     <!-- 第三部分：图片 -->
@@ -73,37 +73,7 @@
 </view>
 
 <!-- 抢沙发提醒，先隐藏 -->
-<view class='container' wx:if="{{true}}">
-  <text class='user-name text-grey'>还没有人评论，快抢占沙发吧！</text>
-</view>
+<myGrabSofa myShow='{{true}}'></myGrabSofa>
 
-<!-- 评论 -->
-<view class="cu-list menu-avatar comment bg-white">
-  <view class="cu-item padding-top-xs" wx:for="{{5}}">
-    <view class="cu-avatar round"
-      style="background-image:url(https://hbimg.huabanimg.com/8a9d13d7ed72acd7a34b0c0f2bb3d79080c362d8af2d-OF5pWW_fw658/format/webp);"></view>
-    <view class="content">
-      <view class="text-grey">是好人呀</view>
-      <navigator url="/pages/community/reply/reply" class="text-gray text-content text-df">
-        今晚夜色真美，风也温柔。
-      </navigator>
-      <view class="margin-top-sm flex justify-between">
-        <view class="text-gray text-df">2021/01/21 22:59</view>
-        <view class="text-lg text-gray">
-          <!-- 点赞 -->
-          <text class="cuIcon-appreciatefill text-red"></text>
-          <!-- 评论 -->
-          <text class="cuIcon-messagefill margin-lr-xs" bindtap="ShowInput"></text>
-        </view>
-      </view>
-      <!-- 评论条数提醒 -->
-      <navigator url="/pages/community/comments/comments" class="padding-top-sm bg-white ">
-        <view class="cu-tag line-grey round df">
-          11条评论
-          <text class="cuIcon-right text-gray margin-left-sm"></text>
-        </view>
-      </navigator>
-    </view>
-
-  </view>
-</view>
+<!-- 评论列表 -->
+<myCommentsList></myCommentsList>

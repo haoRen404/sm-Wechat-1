@@ -1,0 +1,30 @@
+<!--component/myCommentsList/myCommentsList.wxml-->
+
+<view class="cu-list menu-avatar comment bg-white">
+  <view class="cu-item padding-top-xs">
+    <view class="cu-avatar round"
+      style="background-image:url(https://hbimg.huabanimg.com/8a9d13d7ed72acd7a34b0c0f2bb3d79080c362d8af2d-OF5pWW_fw658/format/webp);"></view>
+    <view class="content">
+      <view class="text-grey">是好人呀</view>
+      <navigator url="/pages/community/reply/reply" class="text-gray text-content text-df">
+        今晚夜色真美，风也温柔。
+      </navigator>
+      <view class="margin-top-sm flex justify-between">
+        <view class="text-gray text-df">2021/01/21 22:59</view>
+        <view class="text-lg text-gray">
+          <!-- 点赞 -->
+          <text class="cuIcon-appreciatefill text-red"></text>
+          <!-- 评论 -->
+          <text class="cuIcon-messagefill margin-lr-xs" bindtap="ShowInput"></text>
+        </view>
+      </view>
+      <!-- 评论条数提醒 -->
+      <navigator url="/pages/community/comments/comments" class="padding-top-sm bg-white ">
+        <view class="cu-tag line-grey round df">
+          11条评论
+          <text class="cuIcon-right text-gray margin-left-sm"></text>
+        </view>
+      </navigator>
+    </view>
+  </view>
+</view>

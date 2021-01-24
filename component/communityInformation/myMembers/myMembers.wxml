@@ -1,0 +1,35 @@
+<!--component/communityInformation/myMembers/myMembers.wxml-->
+
+<view class='margin-sm bg-white padding radius shadow-lg'>
+  <view wx:for="{{members}}">
+    <view class="flex solid-bottom justify-between solids-bottom">
+      <!-- 部门名 -->
+      <view class="padding-tb-sm padding-left-xl">{{item.sector}}</view>
+      <!-- 三角 -->
+      <view class="padding-tb-sm padding-right-xl" bindtap="Show" id="{{index}}"><text class="cuIcon-{{index==bmId?'fold':'unfold' }}" /></view>
+    </view>
+
+    <view class='bg-white padding-lr-lg radius shadow-lg' wx:if="{{index==bmId}}">
+      <view class="cu-card article no-card solids-bottom" wx:for-item="ite" wx:for="{{item.students}}">
+        <view class="cu-item shadow">
+          <view class="title">
+            <view>{{ite.name}}：{{ite.class}}</view>
+          </view>
+          <view class="content">
+            <image
+              src="{{ite.photo}}"
+              mode="aspectFill"></image>
+            <view class="desc">
+              <view class=" text-sm">{{ite.introduce}}</view>
+              <view>
+                <view class="cu-tag bg-green light sm round">{{item.sector}}</view>
+                <view class="cu-tag bg-green light sm round">{{ite.job}}</view>
+                <view class="cu-tag bg-green light sm round">{{ite.sex}}</view>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

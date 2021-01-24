@@ -1,0 +1,23 @@
+/* component/communityInformation/myContact/myContact.wxss */
+
+@import "/colorui/main.wxss";
+@import "/colorui/icon.wxss";
+
+/* 头像部分的样式 */
+.UCenter-bg {
+  /* background-image: url(https://hbimg.huabanimg.com/35d2b9f15ec65f17cfc90ceb5dc04604390a7b64175f4-sqL57q); */
+  background-size: cover;
+  height: 450rpx; /*背景的高度*/
+  display: flex;
+  justify-content: center;
+  padding-top: 40rpx;
+  overflow: hidden;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+}
+
+.UCenter-bg image {
+  width: 300rpx;
+  /* height: 300rpx; */
+}

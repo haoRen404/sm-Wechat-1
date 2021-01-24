@@ -1,0 +1,5 @@
+/* component/communityInformation/myTeacher/myTeacher.wxss */
+
+
+@import "/colorui/main.wxss";
+@import "/colorui/icon.wxss";

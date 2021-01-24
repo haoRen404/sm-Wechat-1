@@ -1,0 +1,19 @@
+<!--component/myBottom/myBottom.wxml-->
+
+<!-- 底部的写评论、关注点赞转发 -->
+<view class="flex justify-between cu-bar tabbar shadow foot bg-white">
+  <view class="margin-xs radius">
+    <view class="search-form round">
+      <text class="cuIcon-write"></text>
+      <!-- 输入框 -->
+      <input type="text" placeholder="写评论..." value="{{content}}" bindtap="hiddenInput" disabled="{{true}}" />
+    </view>
+  </view>
+  <view class="margin-xs radius text-xl">
+    <text class="cuIcon-favor padding-right"></text>
+    <text class="cuIcon-appreciate padding-right"></text>
+    <text class="cuIcon-forward padding-right"></text>
+  </view>
+</view>
+
+<myInput hiddenInput="{{hiddenInput}}" initialHeight="{{initialHeight}}" bind:contentUpdates="contentUpdates"></myInput>

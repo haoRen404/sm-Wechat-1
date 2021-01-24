@@ -1,3 +1,10 @@
 {
-  "usingComponents": {}
+  "usingComponents": {
+    "myBottomExposed": "/component/myBottomExposed/myBottomExposed",
+    "myAbout": "/component/communityInformation/myAbout/myAbout",
+    "myHistory": "/component/communityInformation/myHistory/myHistory",
+    "myTeacher": "/component/communityInformation/myTeacher/myTeacher",
+    "myMembers": "/component/communityInformation/myMembers/myMembers",
+    "myContact": "/component/communityInformation/myContact/myContact"
+  }
 }

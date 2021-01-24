@@ -1,10 +1,2 @@
 /* pages/community/details/details.wxss */
 
-/* 让沙发提醒居中 */
-.container{
-  display: flex;
-  align-items: center;
-  justify-content: center; 
-  /* width:200px;  */
-  height:100px;
-}

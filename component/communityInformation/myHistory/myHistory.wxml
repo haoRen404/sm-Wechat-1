@@ -1,0 +1,25 @@
+<!--component/communityInformation/myHistory/myHistory.wxml-->
+
+<!-- 发展历程 -->
+<view class='margin-sm bg-white padding-xl radius shadow-lg'>
+  <view class="cu-timeline">
+    
+    <view class="cu-item text-green" wx:for="{{history}}">
+      <view class="bg-gradual-green content shadow">
+        <view class="cu-capsule radius">
+          <!-- 事件标题 -->
+          <view class="cu-tag bg-white text-green">{{item.title}}</view>
+          <!-- 事件时间 -->
+          <view class="cu-tag line-white">{{item.date}}</view>
+        </view>
+        <view class="margin-top-sm text-content text-sm">
+          <!-- 时间内容 -->
+          <view>{{item.content}}</view>
+        </view>
+      </view>
+    </view>
+    
+  </view>
+</view>
+
+

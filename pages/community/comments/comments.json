@@ -1,3 +1,6 @@
 {
-  "usingComponents": {}
+  "usingComponents": {
+    "myCommentDetails": "/component/myCommentDetails/myCommentDetails",
+    "myHeadMenuTwo": "/component/myHeadMenuTwo/myHeadMenuTwo"
+  }
 }

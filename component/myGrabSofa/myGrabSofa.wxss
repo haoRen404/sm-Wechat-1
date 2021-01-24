@@ -1,0 +1,13 @@
+/* component/myGrabSofa/myGrabSofa.wxss */
+
+@import "/colorui/main.wxss";
+@import "/colorui/icon.wxss";
+
+/* 让沙发提醒居中 */
+.container{
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+  /* width:200px;  */
+  height:100px;
+}

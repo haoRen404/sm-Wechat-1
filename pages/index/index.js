@@ -1,6 +1,6 @@
 Page({
   data: {
-    PageCur: 'home' // 控制初始显示的页面
+    PageCur: 'organization' // 控制初始显示的页面
   },
   NavChange(e) {
     this.setData({

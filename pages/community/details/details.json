@@ -1,3 +1,6 @@
 {
-  "usingComponents": {}
+  "usingComponents": {
+    "myGrabSofa": "/component/myGrabSofa/myGrabSofa",
+    "myCommentsList": "/component/myCommentsList/myCommentsList"
+  }
 }

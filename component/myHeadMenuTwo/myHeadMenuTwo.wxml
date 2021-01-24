@@ -1,0 +1,7 @@
+<!--component/myHeadMenuTwo/myHeadMenuTwo.wxml-->
+
+<!-- 头部导航 -->
+<cu-custom bgColor="bg-gradual-pink" isBack="{{true}}">
+  <view slot="backText">{{backText}}</view>
+  <view slot="content">{{headTitle}}</view>
+</cu-custom>

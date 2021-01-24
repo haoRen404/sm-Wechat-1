@@ -1,0 +1,27 @@
+<!--component/myInput/myInput.wxml-->
+
+<!-- 进行评论的输入框 -->
+<view class="cu-bar foot input {{InputBottom!=0?'cur':''}}" bindtap="hideIcon" style="bottom:{{InputBottom-2}}px" hidden="{{hiddenInput}}">
+  <!-- 取消按钮 -->
+  <view class="action" bindtap="hiddenInput">
+    <text class="cuIcon-unfold text-grey"></text>
+  </view>
+  <!-- 输入框 -->
+  <textarea
+    class="solid-bottom padding t-height" 
+    value="{{content}}"
+    bindfocus="InputFocus" 
+    bindblur="InputBlur" 
+    bindinput='contentUpdates'
+    adjust-position="{{false}}" 
+    maxlength="300" 
+    cursor-spacing="10" 
+    show-confirm-bar="{{false}}"
+  ></textarea>
+  <!-- 表情按钮 -->
+  <!-- <view class="action">
+    <text class="cuIcon-emojifill text-grey"></text>
+  </view> -->
+  <!-- 发送按钮 -->
+  <button class="cu-btn bg-green shadow" bindtap="send">发送</button>
+</view>

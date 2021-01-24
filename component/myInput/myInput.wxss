@@ -1,0 +1,11 @@
+/* component/myInput/myInput.wxss */
+
+@import "/colorui/main.wxss";
+@import "/colorui/icon.wxss";
+
+.t-height{
+  min-height:250rpx;
+  height: 250rpx;
+  min-width: 70%;
+  width: 70%;
+}

@@ -1,3 +1,8 @@
 {
-  "usingComponents": {}
+  "usingComponents": {
+    "myBottom": "/component/myBottom/myBottom",
+    "myInput": "/component/myInput/myInput",
+    "myHeadMenuTwo": "/component/myHeadMenuTwo/myHeadMenuTwo",
+    "myCommentsList": "/component/myCommentsList/myCommentsList"
+  }
 }
