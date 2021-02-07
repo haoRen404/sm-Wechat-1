@@ -6,7 +6,6 @@
 /* 头像部分的样式 */
 /* 头像部分的样式 */
 .UCenter-bg {
-  background-image: url(https://hbimg.huabanimg.com/35d2b9f15ec65f17cfc90ceb5dc04604390a7b64175f4-sqL57q);/*背景图*/
   background-size: cover;
   height: 450rpx; /*背景的高度*/
   display: flex;

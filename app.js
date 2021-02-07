@@ -46,7 +46,13 @@ App({
       }
     })
   },
+  // 全局变量
   globalData: {
-    userInfo: null
+    natappUrl: 'http://37qc86.natappfree.cc',
+    userInfo: null,
+    hasUserInfo: false,
+    onLogin: false,// 登录状态
+    token: '',
+    openid:'',
   }
 })

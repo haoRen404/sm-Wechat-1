@@ -1,9 +1,17 @@
+<!-- 登录测试 -->
+<!-- <view class="padding flex flex-direction">
+  <button class="cu-btn bg-grey lg">玄灰</button> -->
+  <!-- open-type是微信开放能力，getUserInfo弹出授权窗口。如果已经授权了，点击就不再弹窗 -->
+  <!-- <button class="cu-btn bg-red margin-tb-sm lg" open-type="getUserInfo" bindgetuserinfo="auth"> 授权登录 </button>
+</view> -->
+
 <!--index.wxml-->
 <home wx:if="{{PageCur=='home'}}"></home>
 <community wx:if="{{PageCur=='community'}}"></community>
 <play wx:if="{{PageCur=='play'}}"></play>
 <organization wx:if="{{PageCur=='organization'}}"></organization>
-<me wx:if="{{PageCur=='me'}}"></me>
+<!-- <me wx:if="{{PageCur=='me'}}"></me> -->
+<meIndex wx:if="{{PageCur=='me'}}" userInfo="{{userInfo}}" hasUserInfo="{{hasUserInfo}}"></meIndex>
 
 <view class="cu-bar tabbar bg-white shadow foot">
   <view class="action" bindtap="NavChange" data-cur="home">

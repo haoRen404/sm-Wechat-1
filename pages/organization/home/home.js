@@ -5,7 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    TabCur: 4,// 第几个tab
+    TabCur: 0,// 第几个tab
     tabNav:[{name:'关于我们'},{name:'发展历程'},{name:'指导老师'},{name:'成员名录'},{name:'联系我们'}],
 
     // 关于我们的data

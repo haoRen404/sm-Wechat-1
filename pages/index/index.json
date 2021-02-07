@@ -4,6 +4,7 @@
     "community": "/pages/community/home/home",
     "play": "/pages/play/home/home",
     "organization": "/pages/organization/home/home",
-    "me": "/pages/me/home/home"
+    "me": "/pages/me/home/home",
+    "meIndex": "/component/index/meIndex/meIndex"
   }
 }

@@ -1,7 +1,7 @@
 <!--pages/organization/home/home.wxml-->
 
 <scroll-view scroll-y class="scrollPage">
-  <view class="UCenter-bg">
+  <view class="UCenter-bg" style="background-image:url(https://hbimg.huabanimg.com/35d2b9f15ec65f17cfc90ceb5dc04604390a7b64175f4-sqL57q_fw658/format/webp)">
     <image src="/images/logo.png" class="png" mode="widthFix"></image>
     <view class="text-xl text-bold padding-top">桂工数模</view>
     <view class="margin-top-sm">

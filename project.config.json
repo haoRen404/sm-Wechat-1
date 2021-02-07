@@ -4,7 +4,7 @@
     "ignore": []
   },
   "setting": {
-    "urlCheck": true,
+    "urlCheck": false,
     "es6": true,
     "enhance": false,
     "postcss": true,
@@ -42,7 +42,7 @@
   "compileType": "miniprogram",
   "libVersion": "2.4.2",
   "appid": "wx7641c06569bb40cd",
-  "projectname": "ColorUI-template",
+  "projectname": "sm-template",
   "debugOptions": {
     "hidedInDevtools": []
   },

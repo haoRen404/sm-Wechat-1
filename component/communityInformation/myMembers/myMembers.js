@@ -54,7 +54,7 @@ Component({
         photo: "https://hbimg.huabanimg.com/e257b8600688cff8c2e2c41c07439b786821f5c913977-GIhnJa_fw658/format/webp",
         introduce: "一个好学生，性格开朗，喜欢打篮球,有空我们约一场!",
         job: "部长",
-        性别: "女"
+        sex: "女"
       },{
         name: "基二",
         class: "信科17-2班",

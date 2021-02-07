@@ -1,4 +1,4 @@
-/* pages/me/home/home.wxss */
+/* component/index/meIndex/meIndex.wxss */
 
 @import "/colorui/main.wxss";
 @import "/colorui/icon.wxss";
